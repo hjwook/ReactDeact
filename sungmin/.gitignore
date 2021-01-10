@@ -1,10 +1,19 @@
 ## 폴더 무시
 ## modern_react/
-node_modules/
 public/
 
 ## 파일 무시
 .eslintcache
+
 package.json
+package-lock.json
+
+reportWebVitals.js
+setupTests.js
+App.test.js
+
+logo.svg
+
 README.md
+
 yarn.lock
