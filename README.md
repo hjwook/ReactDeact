@@ -1,2 +1,2 @@
-# ReactDeact
-리액트 공부방
+# React
+리액트 공부
