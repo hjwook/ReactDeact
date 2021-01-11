@@ -4,6 +4,7 @@ import Hello from './Hello';
 import React from 'react';
 import Wrapper from './Wrapper';
 import Counter from './Counter';
+import InputSample from './InputSamples';
 
 
 function App() {
@@ -83,10 +84,14 @@ function App() {
   // )
 
   //1-7
-  return (
-    <Counter />
-  );
+  // return (
+  //   <Counter />
+  // );
 
+  //1-8
+  return (
+    <InputSample />
+  );
 
 }
 
