@@ -3,6 +3,7 @@ import './App.css';
 import Hello from './Hello';
 import React from 'react';
 import Wrapper from './Wrapper';
+import Counter from './Counter';
 
 
 function App() {
@@ -73,12 +74,18 @@ function App() {
   //   </>
   // );
   //1-6
+  // return (
+  //   <Wrapper>
+  //     <Hello name="살려주세오" color="red" isSpecial={true}/>
+  //     <Hello color="pink" />
+  //   </Wrapper>
+    
+  // )
+
+  //1-7
   return (
-    <Wrapper>
-      <Hello name="살려주세오" color="red" isSpecial={true}/>
-      <Hello color="pink" />
-    </Wrapper>
-  )
+    <Counter />
+  );
 
 
 }
