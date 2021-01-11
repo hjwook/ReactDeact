@@ -24,11 +24,41 @@ function App() {
   //   </div>
   // );
   
-  return (
-    <div>
-        <Hello />
-    </div>
-);
+  //1-3
+  // return (
+  //   <div>
+  //       <Hello />
+  //   </div>
+  // );
+
+  //1-4
+  const name = '허정욱';
+    const style = {
+        backgroundColor: 'blue',
+        color: 'red',
+        fonsize : 30,
+        padding : '10rem'
+    }
+    return (
+        <>
+          {/* 주석은 보이지 않는다 이말이야.*/}
+            <div style = {style}>
+                <Hello />
+                <Hello />
+                <Hello />
+                <input />
+                <br />
+            </div>
+            <div className="gray-box">{name}</div>
+            <>
+            <Hello />
+            <Hello />
+            <Hello />
+            <input />
+            <br />
+            </>
+        </>
+    );
 }
 
 export default App;
