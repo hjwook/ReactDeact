@@ -60,18 +60,25 @@ function App() {
   //           </>
   //       </>
   //   );
+  //1-5
+  // return (
+  //   <>
+  //     <Hello name="허정욱" color = "blue" />
+  //     <Hello  color = "blue" />
+  //     <Hello />
 
+  //     <Wrapper>
+  //       <Hello color = "pink"/>
+  //   </Wrapper>
+  //   </>
+  // );
+  //1-6
   return (
-    <>
-      <Hello name="허정욱" color = "blue" />
-      <Hello  color = "blue" />
-      <Hello />
-
-      <Wrapper>
-        <Hello color = "pink"/>
+    <Wrapper>
+      <Hello name="살려주세오" color="red" isSpecial={true}/>
+      <Hello color="pink" />
     </Wrapper>
-    </>
-  );
+  )
 
 
 }
