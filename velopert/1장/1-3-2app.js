@@ -2,7 +2,7 @@ import React from 'react';
 import Hello from './Hello';
 
 function App() {
-  return (
+  return ( 
     <div>
       <Hello />
     </div>
