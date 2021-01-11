@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Hello from './Hello';
 import React from 'react';
+import Wrapper from './Wrapper';
 
 
 function App() {
@@ -32,33 +33,47 @@ function App() {
   // );
 
   //1-4
-  const name = '허정욱';
-    const style = {
-        backgroundColor: 'blue',
-        color: 'red',
-        fonsize : 30,
-        padding : '10rem'
-    }
-    return (
-        <>
-          {/* 주석은 보이지 않는다 이말이야.*/}
-            <div style = {style}>
-                <Hello />
-                <Hello />
-                <Hello />
-                <input />
-                <br />
-            </div>
-            <div className="gray-box">{name}</div>
-            <>
-            <Hello />
-            <Hello />
-            <Hello />
-            <input />
-            <br />
-            </>
-        </>
-    );
+  // const name = '허정욱';
+  //   const style = {
+  //       backgroundColor: 'blue',
+  //       color: 'red',
+  //       fonsize : 30,
+  //       padding : '10rem'
+  //   }
+  //   return (
+  //       <>
+  //         {/* 주석은 보이지 않는다 이말이야.*/}
+  //           <div style = {style}>
+  //               <Hello />
+  //               <Hello />
+  //               <Hello />
+  //               <input />
+  //               <br />
+  //           </div>
+  //           <div className="gray-box">{name}</div>
+  //           <>
+  //           <Hello />
+  //           <Hello />
+  //           <Hello />
+  //           <input />
+  //           <br />
+  //           </>
+  //       </>
+  //   );
+
+  return (
+    <>
+      <Hello name="허정욱" color = "blue" />
+      <Hello  color = "blue" />
+      <Hello />
+
+      <Wrapper>
+        <Hello color = "pink"/>
+    </Wrapper>
+    </>
+  );
+
+
 }
 
 export default App;
