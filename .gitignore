@@ -2,6 +2,7 @@
 
 # dependencies
 begin-react/node_modules
+error-catch/node_modules
 # /.pnp
 # .pnp.js
 

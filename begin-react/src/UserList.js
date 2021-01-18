@@ -86,9 +86,120 @@
 
 // export default UserList;
 //1-15
-import React from 'react';
+// import React from 'react';
 
-function User({ user, onRemove, onToggle }) {
+// function User({ user, onRemove, onToggle }) {
+//   return (
+//     <div>
+//       <b
+//         style={{
+//           cursor: 'pointer',
+//           color: user.active ? 'green' : 'black'
+//         }}
+//         onClick={() => onToggle(user.id)}
+//       >
+//         {user.username}
+//       </b>
+//       &nbsp;
+//       <span>({user.email})</span>
+//       <button onClick={() => onRemove(user.id)}>삭제</button>
+//     </div>
+//   );
+// }
+
+// function UserList({ users, onRemove, onToggle }) {
+//   return (
+//     <div>
+//       {users.map(user => (
+//         <User
+//           user={user}
+//           key={user.id}
+//           onRemove={onRemove}
+//           onToggle={onToggle}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default UserList;
+//1-16
+//import React, { useEffect } from 'react';
+
+// function User({ user, onRemove, onToggle }) {
+//   useEffect(() => {
+//     console.log('user 값이 설정됨')
+//     console.log(user);
+//     return () => {
+//       console.log('user가 바뀌기 전..');
+//       console.log(user);
+//     };
+//   }, [user]);
+//   return (
+//     <div>
+//       <b
+//         style={{
+//           cursor: 'pointer',
+//           color: user.active ? 'green' : 'black'
+//         }}
+//         onClick={() => onToggle(user.id)}
+//       >
+//         {user.username}
+//       </b>
+//       &nbsp;
+//       <span>({user.email})</span>
+//       <button onClick={() => onRemove(user.id)}>삭제</button>
+//     </div>
+//   );
+// }
+
+// function User({ user, onRemove, onToggle }) {
+//   useEffect(() => {
+//     console.log(user);
+//   });
+//   return (
+//     <div>
+//       <b
+//         style={{
+//           cursor: 'pointer',
+//           color: user.active ? 'green' : 'black'
+//         }}
+//         onClick={() => onToggle(user.id)}
+//       >
+//         {user.username}
+//       </b>
+//       &nbsp;
+//       <span>({user.email})</span>
+//       <button onClick={() => onRemove(user.id)}>삭제</button>
+//     </div>
+//   );
+// }
+// function UserList({ users, onRemove, onToggle }) {
+//   return (
+//     <div>
+//       {users.map(user => (
+//         <User
+//           user={user}
+//           key={user.id}
+//           onRemove={onRemove}
+//           onToggle={onToggle}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default React.memo(UserList);
+
+//1-22
+import React, {useContext} from 'react';
+import {UserDispatch} from './App';
+
+
+const User = React.memo(function User({ user }) {
+  
+  const dispatch = useContext(UserDispatch);
+
   return (
     <div>
       <b
@@ -96,30 +207,35 @@ function User({ user, onRemove, onToggle }) {
           cursor: 'pointer',
           color: user.active ? 'green' : 'black'
         }}
-        onClick={() => onToggle(user.id)}
+        onClick={() => {
+          dispatch({type: 'TOGGLE_USER', id: user.id});
+
+        }}
       >
         {user.username}
       </b>
       &nbsp;
       <span>({user.email})</span>
-      <button onClick={() => onRemove(user.id)}>삭제</button>
+      <button onClick={() => {
+        dispatch({type: 'REMOVE_USER', id: user.id});
+
+
+      }}>삭제</button>
     </div>
   );
-}
+});
 
-function UserList({ users, onRemove, onToggle }) {
+function UserList({ users }) {
   return (
     <div>
       {users.map(user => (
-        <User
-          user={user}
-          key={user.id}
-          onRemove={onRemove}
-          onToggle={onToggle}
+        <User 
+          user={user} 
+          key={user.id} 
         />
       ))}
     </div>
   );
 }
 
-export default UserList;
+export default React.memo(UserList);
