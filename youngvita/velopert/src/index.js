@@ -12,7 +12,12 @@ import './index.css';
 //import App from './1_13App';
 //import App from './1_14App';
 //import App from './1_16App';
-import App from './1_17App';
+//import App from './1_17App';
+//import App from './1_18App';
+//import App from './1_19App';
+//import App from './1_20App';
+//import App from './1_21App';
+import App from './1_22App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
