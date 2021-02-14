@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-begin-react/node_modules
-error-catch/node_modules
+hjwook/begin-react/node_modules
+hjwook/error-catch/node_modules
 # /.pnp
 # .pnp.js
 
