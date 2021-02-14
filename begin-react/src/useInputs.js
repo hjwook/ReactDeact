@@ -1,10 +1,8 @@
-import { useState, useCallback, useReducer } from 'react';
+import { useState, useCallback } from 'react';
 
 function useInputs(initialForm) {
   const [form, setForm] = useState(initialForm);
-  
-  const [state, dispatch] = useReducer(reducer, initalForm);
-
+  // change
   const onChange = useCallback(e => {
     const { name, value } = e.target;
     setForm(form => ({ ...form, [name]: value }));

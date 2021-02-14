@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './1-20App';
+import App from './1-21App';
 import reportWebVitals from './reportWebVitals';
 //import * as serviceWorker from './serviceWorker';
 import Counter from './Counter';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+ ReactDOM.render(
+   <React.StrictMode>
+     <App />
+   </React.StrictMode>,
+   document.getElementById('root')
+ );
 
-ReactDOM.render(<Counter />, document.getElementById('root'));
+//ReactDOM.render(<Counter />, document.getElementById('root'));
 
 
 // If you want to start measuring performance in your app, pass a function
