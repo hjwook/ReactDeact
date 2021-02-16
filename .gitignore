@@ -2,6 +2,7 @@
 
 # dependencies
 hjwook/begin-react/node_modules
+node_modules/
 hjwook/error-catch/node_modules
 # /.pnp
 # .pnp.js
